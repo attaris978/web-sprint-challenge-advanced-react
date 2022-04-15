@@ -1,8 +1,41 @@
-import React from 'react'
+import React from "react";
 
 export default class AppClass extends React.Component {
+  state = {
+    x: 2,
+    y: 2,
+    steps: 0,
+    email: "",
+  };
+
+  resetState = () => {
+    this.setState({
+      x: 2,
+      y: 2,
+      steps: 0,
+      email: "",
+    });
+  };
+
+  // fetch("http://localhost:9000/api/result", {
+  //     method: "POST",
+  //     headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify({
+  //         'x':1,
+  //         'y':1,
+  //         'steps':1,
+  //         'email':"lady@gaga.com"
+  //     })
+  // })
+  // .then(response => response.json())
+  // .then(json => console.log(json))
+  // .catch(error => console.error(error));
+
   render() {
-    const { className } = this.props
+    const { className } = this.props;
     return (
       <div id="wrapper" className={className}>
         <div className="info">
@@ -35,6 +68,6 @@ export default class AppClass extends React.Component {
           <input id="submit" type="submit"></input>
         </form>
       </div>
-    )
+    );
   }
 }
