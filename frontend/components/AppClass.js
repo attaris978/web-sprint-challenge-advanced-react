@@ -6,6 +6,7 @@ export default class AppClass extends React.Component {
     y: 2,
     steps: 0,
     email: "",
+    message: ""
   };
 
   resetState = () => {
@@ -14,8 +15,50 @@ export default class AppClass extends React.Component {
       y: 2,
       steps: 0,
       email: "",
+      message: ""
     });
   };
+
+  updateLocation = (xVar,yVar) => {
+    
+    if (this.state.x + xVar > 3) {
+      this.setState( {
+        ...this.state,
+        message: "You can't go right"
+      })
+    }
+
+    else if (this.state.x + xVar < 1) {
+      this.setState( {
+        ...this.state,
+        message: "You can't go left"
+      })
+    }
+
+    else if (this.state.y + yVar > 3) {
+      this.setState( {
+        ...this.state,
+        message: "You can't go up"
+      })
+    }
+
+    else if (this.state.y + yVar < 1) {
+      this.setState( {
+        ...this.state,
+        message: "You can't go down"
+      })
+    }
+
+    else {
+      this.setState( {
+        ...this.state,
+        x: this.state.x + xVar,
+        y: this.state.y + yVar,
+        steps: this.state.steps + 1
+      })
+    }
+
+  }
 
   // fetch("http://localhost:9000/api/result", {
   //     method: "POST",
