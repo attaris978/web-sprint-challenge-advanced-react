@@ -90,7 +90,7 @@ nav a.active:nth-last-of-type(2) {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  color: white;
+  color: rgba(0,0,0,.1);
 }
 
 .class-based #grid .square, .functional #grid .square.active {
@@ -98,7 +98,10 @@ nav a.active:nth-last-of-type(2) {
 }
 
 .class-based #grid .square.active, .functional #grid .square {
-  background-color: #ff4b00;
+  background-image:url('../components/bee.png');
+  background-position: center;
+  background-repeat: no-repeat;
+   /* background-color: #ff4b00; */
 }
 
 #keypad {
