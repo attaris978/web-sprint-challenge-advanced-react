@@ -1,4 +1,3 @@
-// Write your tests here
 import React from "react";
 import AppClass from "./AppClass";
 import { screen, render } from "@testing-library/react";
@@ -44,7 +43,3 @@ test("test that one letter B block exists", () => {
   render(<AppClass />);
   expect(screen.getByText('B')).toBeVisible();
 });
-
-//I had to maneuver these a little differently than I would ordinarily because 
-//the testing-library user-event section is not installed and I didn't want to 
-//mess with my passing project to try and get it installed.

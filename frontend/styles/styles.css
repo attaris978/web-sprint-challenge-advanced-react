@@ -97,11 +97,10 @@ nav a.active:nth-last-of-type(2) {
   background-color: #00808c
 }
 
-.class-based #grid .square.active, .functional #grid .square {
+.class-based #grid .square.active, .functional #grid .square.active {
   background-image:url('../components/bee.png');
   background-position: center;
   background-repeat: no-repeat;
-   /* background-color: #ff4b00; */
 }
 
 #keypad {
